@@ -51,4 +51,7 @@ spec:
   externalName: es.internal.example.com   # atau pakai Endpoints ke <private-ip>:8030
 ```
 
-lalu app nembak `http://elasticsearch:8030`.
+lalu app nembak `http://elasticsearch:9200`.
+
+Manifest siap pakai ada di `k8s/elasticsearch.yaml` (Service tanpa selector +
+EndpointSlice ke private IP VM). Edit `<VM_PRIVATE_IP>`, lalu `kubectl apply -f k8s/`.
